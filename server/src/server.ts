@@ -13,5 +13,8 @@ app.register(appRoutes)
 
 
 app.listen({
-  port: 3000
-}, ()=>console.log("Rodando na porta 3000"))
+  port: 3000,  
+  host: '0.0.0.0',
+}).then(() => {
+  console.log('Servidor rodando na porta 3000!!!')
+})
