@@ -1,6 +1,7 @@
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
-import { appRoutes } from './routes'
+import { appRoutes } from './lib/routes'
+import { notificationsRoutes } from './lib/notifications-routes'
 
 
 
@@ -10,6 +11,7 @@ const app = Fastify()
 
 app.register(cors)
 app.register(appRoutes)
+app.register(notificationsRoutes)
 
 
 app.listen({

@@ -4,6 +4,9 @@ import { Header } from './components/Header';
 import { SummaryTable } from './components/SummaryTable';
 import './lib/dayjs'
 
+//O comando abaixo é para que possamos rodar nosso registro quando a aplicação estiver fechada.
+
+navigator.serviceWorker.register('service-worker.js')
 export function App() {
   return (
     // Centralizando toda a minha div e utilizando todo o comprimento e a altura disponiveis
